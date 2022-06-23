@@ -583,9 +583,9 @@ pass (`else`).
 script:
   - if:
       - alias: "If no one is home"
-        condition: numeric_state
+        condition: state
         entity_id: zone.home
-        above: 0
+        state: "0"
     then:
       - alias: "Then start cleaning already!"
         service: vacuum.start
