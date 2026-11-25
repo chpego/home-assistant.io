@@ -79,8 +79,9 @@ The device page links to the power station's own web interface. The serial numbe
 ### Controls
 
 - **Charge limit**, **Discharge limit**: The battery levels the power station stops charging at, and stops discharging at. Both accept 5 to 100 %.
+- **AC output**: Turns the power station's AC output on or off.
 
-Both limits are configuration entities. They are read every 60 seconds, so a change made in the BLUETTI app shows up within a minute. They are unavailable while the power station cannot be read.
+The charge and discharge limits are configuration entities. The controls are read every 60 seconds, so a change made in the BLUETTI app shows up within a minute. They are unavailable while the power station cannot be read.
 
 ## Data updates
 
@@ -93,7 +94,6 @@ Home Assistant keeps one Modbus connection per address and shares it between the
 ### Controls and sensors
 
 - The fault and warning bits are not available as binary sensors yet.
-- The AC output cannot be switched from Home Assistant yet.
 - Grid charging and grid feed-in are not available yet. The power station's working mode can undo a change made outside the BLUETTI app.
 
 ### Battery packs
